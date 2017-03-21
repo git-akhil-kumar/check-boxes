@@ -1,0 +1,102 @@
+package com.example.ryuzaki.checkbox;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+
+    public CheckBox btech , ece , phd ;
+    public Button b;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    //    painindaass();
+        assss();
+    //    appending_toast() ;
+    }
+
+    public void assss(){
+        btech = (CheckBox)findViewById(R.id.checkBox4);
+        btech.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if (((CheckBox)v).isChecked()) {
+                            Toast.makeText(MainActivity.this, "btech is selected" , Toast.LENGTH_LONG).show();
+                        }
+                        if (((CheckBox)v).isChecked()){
+                            Toast.makeText(MainActivity.this, "ECE is selected" , Toast.LENGTH_LONG).show();
+
+                        }
+
+                        if (((CheckBox)v).isChecked()){
+                            Toast.makeText(MainActivity.this, "phd is selected" , Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                }
+        );
+    }
+
+
+    /* public void appending_toast(){
+        btech = (CheckBox)findViewById(R.id.checkBox4);
+        ece = (CheckBox)findViewById(R.id.checkBox5);
+        phd = (CheckBox)findViewById(R.id.checkBox7);
+        b = (Button)findViewById(R.id.button);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StringBuffer s = new StringBuffer();
+                s.append("btech").append(btech.isChecked());
+                s.append("\nece").append(ece.isChecked());
+                s.append("\nphd").append(phd.isChecked());
+
+                Toast.makeText(
+                        MainActivity.this, s.toString(),Toast.LENGTH_LONG
+                ).show();
+
+
+            }
+        });
+
+    } */
+   /* public void painindaass(){
+        btech = (CheckBox)findViewById(R.id.checkBox4);
+        ece = (CheckBox)findViewById(R.id.checkBox5);
+        phd = (CheckBox)findViewById(R.id.checkBox7);
+        b = (Button)findViewById(R.id.button);
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String s = new String();
+                if(btech.isChecked()){
+                    Toast.makeText(MainActivity.this , "B.Tech" , Toast.LENGTH_SHORT ).show();
+
+                }
+
+
+                if(ece.isChecked()){
+                    Toast.makeText(MainActivity.this , ("ECE") , Toast.LENGTH_SHORT ).show();
+
+                }
+
+                if(phd.isChecked()){
+                    Toast.makeText(MainActivity.this , "PHD" , Toast.LENGTH_SHORT ).show();
+
+                }
+
+
+
+            }
+        });
+    } */
+
+
+}
